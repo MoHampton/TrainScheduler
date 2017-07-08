@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+		<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/bootswatch.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            </button>
+            <a class="navbar-brand" href="index.html">Mo Hampton</a>
+          </div>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/MoHampton">About</a></li>
+              <li><a href="https://www.linkedin.com/feed/">Contact</a></li>
+            </ul>
+          </div>
+      </nav>
+		<div class="container">
+			<div class="jumbotron">
+				 <h1 class="text-center"><img id="logo" src="assets/images/logo.png">Soul<small>Train</small></h1>
+				 <h5 class="text-center" id="currentTime"></h5>
+			 </div>
+
+			 <div class="container schedule-container">
+				<div class="row">
+				<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+				<div class="panel panel-primary">
+				<div class="panel-heading">
+				 <h3 class="panel-title">Current Train Schedule</h3>
+				</div>
+						<div class="panel-body">
+							<table class="table table-hover table-responsive" id="trainTable" style="background-color: none !important; color: none">
+								<thead>
+									<tr>
+										<th>Train Name</th>
+										<th>Destination</th>
+										<th>Frequency (min)</th>
+										<th>Next Arrival</th>
+										<th>Minutes Away</th>
+									</tr>
+								</thead>
+							<tbody id="trainTable">
+						<tr></tr>
+					</tbody>
+				</table>
+				</div>  
+				</div> 
+				</div> 
+				</div>
+			</div> 
+
+		 <div class="container input-container">
+			  <div class="row">
+
+				  <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+					   <div class="panel panel-warning">
+							<div class="panel-heading">
+								 <h3 class="panel-title">Add Train</h3>
+							</div>
+							<div class="panel-body">
+
+								 <form role="form">
+								   <div class="form-group">
+									 <label for="text">Train Name</label>
+									 <input type="text" class="form-control" id="name-input">
+								   </div>
+								   <div class="form-group">
+									 <label for="text">Destination</label>
+									 <input type="text" class="form-control" id="destination-input">
+								   </div>
+								   <div class="form-group">
+									 <label for="text">First Train Time (HH:mm - military time)</label>
+									 <input type="text" class="form-control" id="first-train-time-input">
+								   </div>
+								   <div class="form-group">
+									 <label for="comment">Frequency (minutes)</label>
+									 <input type="text" class="form-control" id="frequency-input">
+								   </div>
+								   <button type="submit" class="btn btn-default" id="add-train">Submit</button>
+								 </form>
+
+							</div> 
+					   </div> 
+				  </div> 
+			 </div> 
+		</div>
+	</div>
+	
+	<script src="assets/js/app.js"></script>
+	</body>
+</html>

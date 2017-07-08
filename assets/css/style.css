@@ -1,0 +1,25 @@
+.navbar-brand {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.navbar {
+
+}
+
+li {
+	padding-top: 10px;
+	font-size: 20px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+.jumbotron h1 {
+	font-family: 'Open Sans Condensed', cursive;
+	font-size: 80px !important;
+	color: lightgrey;
+}
+
+#logo {
+	width: 200px;
+}
+
