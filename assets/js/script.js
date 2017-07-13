@@ -22,7 +22,7 @@ $(document).ready(function () {
 		var time = $("#first-train-time-input").val().trim();
 		var frequency = $("#frequency-input").val().trim();
 
-		database.ref().push({
+		database.ref("trainlog").push({
 		name: name,
 		dest: destination,
 		time: time,
@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 	});
 	//When an objet child is pushed to the database this function is called
-	database.ref().on("child_added", function(childSnapshot) {
+	database.ref("trainlog").on("child_added", function(childSnapshot) {
 		//Set our working variables to the last child object added to the database
 		var name = childSnapshot.val().name;
 		var destination = childSnapshot.val().dest;
